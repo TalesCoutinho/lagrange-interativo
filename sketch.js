@@ -109,13 +109,11 @@ function interpolar(lista){
   }
 }
 
-function finalizarInterpolacao(lista){
+function finalizarInterpolacao(x){
   stroke(255,100,100);
   strokeWeight(1);
   var x0, y0, x1, y1;
-  const inicio = lista[lista.length -1].x;
-  console.log(inicio);
-  console.log(lista);
+  const inicio = x;
   var i = 0;
   while(inicio + i*(Math.abs(boundriesX[1] - boundriesX[0])/resolution)  < width){
     x0 = (inicio + i*(Math.abs(boundriesX[1] - boundriesX[0])/resolution));
@@ -154,7 +152,7 @@ function plotInterpolacao1(){
 
   interpolar(listaPontos);
   iniciarInterpolacao();
-  finalizarInterpolacao(listaPontos);
+  finalizarInterpolacao(listaPontos[listaPontos.length -1].x);
 }
 
 function plotInterpolacao3(){
@@ -178,7 +176,7 @@ function plotInterpolacao3(){
   }
   interpolar(listaResto);
   iniciarInterpolacao();
-  finalizarInterpolacao(listaResto);
+  finalizarInterpolacao(listaPontos[listaPontos.length -1].x);
 }
 
 function plotInterpolacao5(){
@@ -202,7 +200,7 @@ function plotInterpolacao5(){
   }
   interpolar(listaResto);
   iniciarInterpolacao();
-  finalizarInterpolacao(listaResto);
+  finalizarInterpolacao(listaPontos[listaPontos.length -1].x);
 }
 
 function plotInterpolacao7(){
@@ -226,7 +224,7 @@ function plotInterpolacao7(){
   }
   interpolar(listaResto);
   iniciarInterpolacao();
-  finalizarInterpolacao(listaResto);
+  finalizarInterpolacao(listaPontos[listaPontos.length -1].x);
 }
 
 
