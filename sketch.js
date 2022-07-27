@@ -173,7 +173,7 @@ function plotInterpolacao3(){
   if(listaResto.length == 0) listaResto.push(listaPontos[listaPontos.length -1])
   for(var i = 0; i <= Math.ceil(listaPontos.length/3); i++){
     if(i==0)listaTemp = listaPontos.slice(0, 3);
-    else listaTemp = listaPontos.slice((i * 3)-1, ((i + 1)*3) - 1)
+    else listaTemp = listaPontos.slice((i * 3)-1, ((i + 1)*3))
     interpolar(listaTemp);
   }
   interpolar(listaResto);
@@ -197,7 +197,7 @@ function plotInterpolacao5(){
   if(listaResto.length == 0) listaResto.push(listaPontos[listaPontos.length -1])
   for(var i = 0; i <= Math.ceil(listaPontos.length/5); i++){
     if(i==0)listaTemp = listaPontos.slice(0, 5);
-    else listaTemp = listaPontos.slice((i * 5)-1, ((i + 1)*5) - 1)
+    else listaTemp = listaPontos.slice((i * 5)-1, ((i + 1)*5))
     interpolar(listaTemp);
   }
   interpolar(listaResto);
@@ -221,7 +221,7 @@ function plotInterpolacao7(){
   if(listaResto.length == 0) listaResto.push(listaPontos[listaPontos.length -1])
   for(var i = 0; i <= Math.ceil(listaPontos.length/7); i++){
     if(i==0)listaTemp = listaPontos.slice(0, 7);
-    else listaTemp = listaPontos.slice((i * 7)-1, ((i + 1)*7) - 1)
+    else listaTemp = listaPontos.slice((i * 7)-1, ((i + 1)*7))
     interpolar(listaTemp);
   }
   interpolar(listaResto);
